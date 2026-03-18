@@ -1,9 +1,17 @@
-## Overview Network Technology
+## A. Overview Cloud On-Premise
+
 <p align="center">
 <img src="img/banner.png">
 </p>
 
-### Information Environment (Software, Hardware, Vendor Technology)
+#### Information
+* [A. Overview Cloud On-Premise](#a-overview-cloud-on-premise)
+* [B. Network Configuration](#b-network-configuration)
+* [C. Build Router on Virtual Private Server](#c-build-router-on-virtual-private-server)
+* [D. Router Configuration](#d-router-configuration)
+* [E. Configuration Proxmox](#e-configuration-proxmox)
+
+#### Environment (Software, Hardware, Vendor Technology)
 - Virtual Private Server (AWS/GCP/DigitalOcean/Hostinger/Local Provider VPS)
 - Spesification VPS 1 CPU, 1 RAM, 30GB Storage Include Public IP
 - OS Virtual Private Server, MikroTik RoS 6.49.xx or Newer
@@ -13,8 +21,7 @@
 - Electircal system support 24/7
 - Internet Broadband FTTH (Minimal Bandwidth 10MB or Higher)
 
-## Network Configuration Scope
-
+## B. Network Configuration
 #### Router MikroTik Configuration
 - Basic Configuration (UserPass Management, VLAN, Static Route, DNS, DHCP Server, DHCP Client)
 - Firewall NAT and Address-List (Whitelist IP, Blocklist IP)
@@ -29,7 +36,7 @@
 - VLAN Host Virtualization
 - Harderning (Disable Root Login, Fail2ban, SSH Custom Port)
 
-## Build Router on Virtual Private Server
+## C. Build Router on Virtual Private Server
 
 #### Setup Virtual Private Server
 - Order VPS (AWS/GCP/DigitalOcean/Hostinger/Local Provider VPS)
@@ -47,10 +54,8 @@
 - Ping 1.1.1.1 or 8.8.8.8 from MikroTik Router
 - Request Time Out (RTO) Ping, Check your DNS from MikroTIk Router until Replay Response
 
-## Router Configuration
-
+## D. Router Configuration
 ### Step 1. Basic Configuration
-
 #### A. MikroTik CHR on VPS
 
 #### Username and Password
@@ -590,10 +595,8 @@ add action=dst-nat chain=dstnat dst-port=53 protocol=udp to-addresses=1.1.1.1 to
 <img src="img/dnscheckwin.png">
 </p>
 
-## Configuration Proxmox
-
+## E. Configuration Proxmox
 ### A. Static IP and VLAN Configuration Proxmox
-
 #### IP Configuration Proxmox, Directory /etc/network/interfaces
 ```
 auto lo
