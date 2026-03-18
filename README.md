@@ -9,7 +9,7 @@
 * [B. Network Configuration](#b-network-configuration)
 * [C. Build Router on Virtual Private Server](#c-build-router-on-virtual-private-server)
 * [D. Router Configuration](#d-router-configuration)
-* [E. Configuration Proxmox](#e-configuration-proxmox)
+* [E. Proxmox Configuration](#e-proxmox-configuration)
 
 #### Environment (Software, Hardware, Vendor Technology)
 - Virtual Private Server (AWS/GCP/DigitalOcean/Hostinger/Local Provider VPS)
@@ -22,7 +22,7 @@
 - Internet Broadband FTTH (Minimal Bandwidth 10MB or Higher)
 
 ## B. Network Configuration
-#### Router MikroTik Configuration
+#### 1. Router MikroTik Configuration
 - Basic Configuration (UserPass Management, VLAN, Static Route, DNS, DHCP Server, DHCP Client)
 - Firewall NAT and Address-List (Whitelist IP, Blocklist IP)
 - VPN Tunnel Server L2TP, SSTP and VPN Client 
@@ -31,19 +31,18 @@
 - Harderning (Drop Brute Force SSH, Privilege Login Access-List, Disable Bandwidth Server, Disable Mac-Server, Delete Default Admin, Disable Neighbor Discovery, Disable SMB, Disable and Custom Port Service)
 - DNS Over HTTPs (Cloudflare)
 
-#### Proxmox Configuration
+#### 2. Proxmox Configuration
 - VLAN Management
 - VLAN Host Virtualization
 - Harderning (Disable Root Login, Fail2ban, SSH Custom Port)
 
 ## C. Build Router on Virtual Private Server
-
-#### Setup Virtual Private Server
+#### 1. Setup Virtual Private Server
 - Order VPS (AWS/GCP/DigitalOcean/Hostinger/Local Provider VPS)
 - Change type OS MikroTik CHRx86 or Ubuntu Newer (Special Case VPS)
 - Access VPS via SSH from Public IP or Console from platform
 
-#### Install MikroTik on Ubuntu VPS (Special Case VPS)
+#### 2. Install MikroTik on Ubuntu VPS (Special Case VPS)
 - Access VPS via SSH from Public IP
 - Update Ubuntu `apt update && apt upgrade -y`
 - Install Git `apt install git -y`
@@ -595,9 +594,9 @@ add action=dst-nat chain=dstnat dst-port=53 protocol=udp to-addresses=1.1.1.1 to
 <img src="img/dnscheckwin.png">
 </p>
 
-## E. Configuration Proxmox
+## E. Proxmox Configuration
 ### A. Static IP and VLAN Configuration Proxmox
-#### IP Configuration Proxmox, Directory /etc/network/interfaces
+#### 1. IP Configuration Proxmox, Directory /etc/network/interfaces
 ```
 auto lo
 iface lo inet loopback
@@ -620,7 +619,7 @@ iface vlan13 inet static
         vlan-raw-device vmbr0
 ```
 
-#### Verification
+#### 2. Verification
 <p align="left">
 <img src="img/proxinetverf.png">
 </p>
@@ -693,11 +692,11 @@ iface vlan13 inet static
 
 ### C. Harderning Proxmox
 
-#### Username and Password Management
+#### 1. Username and Password Management
 * Create New Username and Password with Full Priviledge
 * Disable Root Login (Default Login)
 
-#### Custom Port SSH (Default 22)
+#### 2. Custom Port SSH (Default 22)
 
 * Edit Port SSH, /etc/ssh/sshd_config
 ```
@@ -737,7 +736,7 @@ Oct 11 00:42:32 awc-east-01.local systemd[1]: Started ssh.service - OpenBSD Secu
 root@awc-east-01:~# 
 ```
 
-#### Install Fail2ban
+#### 3. Install Fail2ban
 
 * Installing Fail2ban
 ```
