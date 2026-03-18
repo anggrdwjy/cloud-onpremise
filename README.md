@@ -608,13 +608,12 @@ iface vlan13 inet static
 </p>
 
 ### B. VLAN Virtual-Machine Testing
-
 #### Test 1. Static IP LXC Container
 <p align="left">
 <img src="img/proxlxcstatic.png">
 </p>
 
-#### Verification LXC Container
+#### Test 1. Verification LXC Container
 <p align="left">
 <img src="img/proxlxcstatictest.png">
 </p>
@@ -624,57 +623,52 @@ iface vlan13 inet static
 <img src="img/proxlxcdhcp.png">
 </p>
 
-#### Verification LXC Container
+#### Test 2. Verification LXC Container
 <p align="left">
 <img src="img/proxlxcdhcptest.png">
 </p>
 
-#### Test 3. Static IP Kernel-Based Virtual Machine (KVM)
-
-#### Configuration KVM Linux
+#### Test 3. Configuration KVM Linux
 <p align="left">
 <img src="img/proxkvmstatic.png">
 </p>
 
-#### Configuration KVM Windows
+#### Test 3. Configuration KVM Windows
 <p align="left">
 <img src="img/proxkvmstaticwin.png">
 </p>
 
-#### Verification KVM Linux
+#### Test 3. Verification KVM Linux
 <p align="left">
 <img src="img/proxkvmstatictest.png">
 </p>
 
-#### Verification KVM Windows
+#### Test 3. Verification KVM Windows
 <p align="left">
 <img src="img/proxkvmstatictestwin.png">
 </p>
 
-#### Test 4. DHCP IP Kernel-Based Virtual Machine (KVM)
-
-#### Configuration KVM Linux
+#### Test 4. Configuration KVM Linux
 <p align="left">
 <img src="img/proxkvmdhcp.png">
 </p>
 
-#### Configuration KVM Windows
+#### Test 4. Configuration KVM Windows
 <p align="left">
 <img src="img/proxkvmdhcpwin.png">
 </p>
 
-#### Verification KVM Linux
+#### Test 4. Verification KVM Linux
 <p align="left">
 <img src="img/proxkvmdhcptest.png">
 </p>
 
-#### Verification KVM Windows
+#### Test 4. Verification KVM Windows
 <p align="left">
 <img src="img/proxkvmdhcptestwin.png">
 </p>
 
 ### C. Harderning Proxmox
-
 #### 1. Username and Password Management
 * Create New Username and Password with Full Priviledge
 * Disable Root Login (Default Login)
@@ -720,7 +714,6 @@ root@awc-east-01:~#
 ```
 
 #### 3. Install Fail2ban
-
 * Installing Fail2ban
 ```
 root@pve:~# git clone https://github.com/anggrdwjy/proxmox-fail2ban.git
