@@ -1,4 +1,3 @@
-## A. Overview Cloud On-Premise
 
 <p align="center">
 <img src="img/banner.png">
@@ -764,7 +763,7 @@ Need to get 549 kB of archives.
 
 Detail Documentation : https://github.com/anggrdwjy/proxmox-fail2ban
 
-## Support
+#### Support
 
 * [:octocat: Follow me on GitHub](https://github.com/anggrdwjy)
 * [🔔 Subscribe me on Youtube](https://www.youtube.com/@anggarda.wijaya)
@@ -775,3 +774,9 @@ Please open an issue on GitHub with as much information as possible if you found
 * Your Virtual Private Server, MikroTik, Proxmox and Fail2ban Version
 * All the logs and message outputted
 * etc
+
+## License
+
+This project is licensed under the **MIT License**—it is free to use, modify, and distribute, including for commercial purposes, as long as you include the copyright notice and this license.
+
+See the full file at [`LICENSE`](LICENSE).
